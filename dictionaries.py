@@ -29,3 +29,48 @@ print(band.get("guitar"))
 
 print(band.keys())
 print(band.items())
+
+
+# verify a key exists
+
+print("guitar" in band)
+print("triangle" in band)
+
+# Change values
+band["vocals"] = "Coverdale"
+band.update({"bass": "JPJ"})
+
+print(band)
+
+# remove items
+
+print(band.pop("bass"))
+print(band)
+
+band["drums"] = "Bonham"  # this returns a tupple
+print(band)
+
+
+print(band.popitem())  # remove the last added item
+print(band)
+
+# delete and clear an item
+
+band["drums"] = "Bonham"  # this returns a tupple
+del band["drums"]
+print(band)
+
+band2.clear()  # clear method
+
+print(band2)
+
+del band2
+
+
+# copying dictionaries
+
+band2 = band  # creates a reference
+print("bad copy!")
+
+print(band2)
+print(band)
